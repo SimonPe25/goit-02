@@ -1,0 +1,336 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Header*/
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 0 215px 0 215px;
+}
+
+.header__logo {
+    cursor: pointer;
+    padding-bottom: 30px;
+}
+
+.logo__text {
+    color: #2196F3;
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+}
+
+.logo__text>span {
+    color: #000000;
+}
+
+.nav__contact,
+.nav__list {
+    display: flex;
+}
+
+.list__link {
+    cursor: pointer;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #212121;
+    margin-left: 50px;
+}
+.list__link:hover {
+    color: #2196F3;
+}
+
+.mail {
+    margin-left: 290px;
+}
+
+.link-phone {
+    color: #757575;
+}
+
+/* Section 2 or effect*/
+.effect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 600px;
+    background-color: #2F303A;
+}
+
+.effect>h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.effect__button {
+    margin-top: 30px;
+    padding: 10px 32px 10px 32px;
+    background-color: #2196F3;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+}
+
+.effect__button:hover {
+    background-color: #ffffff;
+    color: #01213c;
+    transition: 1s;
+}
+
+/* Section 3 */
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 95px 215px 0px 216px;
+}
+
+.wrapper-text {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.wrapper-text__item {
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+}
+
+.text-content__main {
+    margin-bottom: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #212121;
+}
+
+.wrapper-text__item>p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #757575;
+}
+
+/* Section 4*/
+
+.doing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 215px 92px 215px;
+}
+
+.question {
+    margin: 96px 0px 50px 2px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+}
+
+.qs-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Section 4 team*/
+
+.team {
+    display: flex;
+    flex-direction: column;
+    padding: 0 215px 94px 215px;
+    background-color: #f5f4fa;
+    width: 100%;
+}
+
+.qs-box__item {
+    width: 270px;
+    height: 368px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: -1px 2px rgb(185, 184, 184);
+}
+
+.qs-box__txh2 {
+    margin-top: 30px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+}
+
+
+.qs-box__txp {
+    margin-top: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #757575;
+}
+
+/* footer*/
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 61px 0 10px 216px;
+    background-color: #2F303A;
+    height: 252px;
+    width: 100%;
+}
+
+.flogo>span {
+    color: white;
+}
+
+.address {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    font-style: normal;   
+}
+
+address {
+    all: initial
+}
+
+.header__logo {
+    height: 28%;
+}
+
+.cnt {
+    display: block;
+    margin-top: 6px;
+    color: rgba(255, 255, 255, 0.6);
+}
+.cnt:hover {
+    color: #2196F3;
+}
