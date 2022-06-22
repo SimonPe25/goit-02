@@ -1,3 +1,4 @@
+/* ------------------------------------- Обнуление стилей----------------------------------------------*/
 /* Указываем box sizing */
 *,
 *::before,
@@ -33,14 +34,6 @@ a {
     text-decoration: none;
 }
 
-/* Выставляем основные настройки по-умолчанию для body */
-body {
-    min-height: 100vh;
-    scroll-behavior: smooth;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
-}
-
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
 ul[class],
 ol[class] {
@@ -63,14 +56,39 @@ article>*+* {
     margin-top: 1em;
 }
 
-/* Наследуем шрифты для инпутов и кнопок */
-input,
-button,
-textarea,
-select {
-    font: inherit;
+/*--------------------------------------- Переменные-------------------------------------------------------*/
+
+:root {
+    /* Шрифты*/
+    --main-font: 'Roboto';
+    --supportive-font: 'Raleway';
+
+    /*Цвета*/
+    --white-background-clr: #FFFFFF;
+    --darkgrey-background-clr: #2F303A;
+    --light-background-clr: #f5f4fa;
+    --btn-hover: #01213c;
+    --foot-context: rgba(255, 255, 255, 0.6);
+    --white-clr: #FFFFFF;
+    --pargraf-clr: #757575;
+    --logo-second-clr: #000000;
+    --clr-txt-main: #212121;
+    --clr-txt-support: #2196F3;
 }
 
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    font-family: var(--main-font), "Tahoma", sans-serif;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    color: #212121;
+    color: var(--clr-txt-main);
+
+}
+
+/* ------------------------------------- Section №1 "effect" ----------------------------------------------*/
 /* Header*/
 .container {
     max-width: 1600px;
@@ -85,7 +103,7 @@ select {
     justify-content: space-between;
     height: 80px;
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: var(--white-background-clr);
     padding: 0 215px 0 215px;
 }
 
@@ -95,16 +113,16 @@ select {
 }
 
 .logo__text {
-    color: #2196F3;
-    font-family: Raleway;
+    color: var(--clr-txt-support);
+    font-family: var(--supportive-font);
     font-weight: 700;
     font-size: 26px;
-    line-height: 31px;
+    line-height: 1.2;
     letter-spacing: 0.03em;
 }
 
 .logo__text>span {
-    color: #000000;
+    color: var(--logo-second-clr);
 }
 
 .nav__contact,
@@ -113,18 +131,18 @@ select {
 }
 
 .list__link {
+    color: var(--clr-txt-main);
     cursor: pointer;
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1.14;
     letter-spacing: 0.02em;
-    color: #212121;
     margin-left: 50px;
 }
+
 .list__link:hover {
-    color: #2196F3;
+    color: var(--clr-txt-support);
 }
 
 .mail {
@@ -132,10 +150,10 @@ select {
 }
 
 .link-phone {
-    color: #757575;
+    color: var(--pargraf-clr);
 }
 
-/* Section 2 or effect*/
+/* ------------------------------------- Section №2 "description" ----------------------------------------------*/
 .effect {
     display: flex;
     align-items: center;
@@ -144,49 +162,49 @@ select {
     text-align: center;
     width: 100%;
     height: 600px;
-    background-color: #2F303A;
+    background-color: var(--darkgrey-background-clr);
 }
 
 .effect>h1 {
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 900;
     font-size: 44px;
-    line-height: 60px;
+    line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--white-clr);
 }
 
 .effect__button {
     margin-top: 30px;
-    padding: 10px 32px 10px 32px;
-    background-color: #2196F3;
+    padding: 10px 27px 10px 30px;
+    background-color: var(--clr-txt-support);
     border-radius: 5px;
     border: none;
     cursor: pointer;
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    line-height: 30px;
-    letter-spacing: 0.06em;
-    color: #FFFFFF;
+    line-height: 1.87;
+    letter-spacing: 0.035em;
+    color: var(--white-clr);
+    width: 200px;
+    height: 50px;
 }
 
 .effect__button:hover {
-    background-color: #ffffff;
-    color: #01213c;
+    background-color: var(--white-background-clr);
+    color: var(--btn-hover);
     transition: 1s;
 }
 
-/* Section 3 */
+/* ------------------------------------- Section №3 "description" ----------------------------------------------*/
 .description {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 95px 215px 0px 216px;
+    padding: 93px 215px 0px 216px;
 }
 
 .wrapper-text {
@@ -202,25 +220,23 @@ select {
 }
 
 .text-content__main {
-    margin-bottom: 10px;
-    font-family: 'Roboto';
+    margin-bottom: 8px;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1.43;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #212121;
+
 }
 
 .wrapper-text__item>p {
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 1.71;
     letter-spacing: 0.03em;
-    color: #757575;
+    color: var(--pargraf-clr);
 }
 
 /* Section 4*/
@@ -234,14 +250,12 @@ select {
 
 .question {
     margin: 96px 0px 50px 2px;
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
-    line-height: 42px;
+    line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
 }
 
 .qs-box {
@@ -250,13 +264,13 @@ select {
     width: 100%;
 }
 
-/* Section 4 team*/
+/* ------------------------------------- Section №4 "team" ----------------------------------------------*/
 
 .team {
     display: flex;
     flex-direction: column;
     padding: 0 215px 94px 215px;
-    background-color: #f5f4fa;
+    background-color: var(--light-background-clr);
     width: 100%;
 }
 
@@ -264,33 +278,30 @@ select {
     width: 270px;
     height: 368px;
     border-radius: 5px;
-    background-color: white;
+    background-color: var(--white-background-clr);
     box-shadow: -1px 2px rgb(185, 184, 184);
 }
 
 .qs-box__txh2 {
     margin-top: 30px;
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 1.19;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
 }
 
 
 .qs-box__txp {
-    margin-top: 10px;
-    font-family: 'Roboto';
+    margin-top: 19px;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 1.19px;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #757575;
+    color: var(--pargraf-clr);
 }
 
 /* footer*/
@@ -299,24 +310,29 @@ select {
     flex-direction: column;
     justify-content: flex-start;
     padding: 61px 0 10px 216px;
-    background-color: #2F303A;
+    background-color: var(--darkgrey-background-clr);
     height: 252px;
     width: 100%;
 }
 
 .flogo>span {
-    color: white;
+    color: var(--white-clr);
 }
 
 .address {
-    font-family: 'Roboto';
+    font-family: var(--main-font);
     font-weight: 400;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 1.71;
     letter-spacing: 0.03em;
-    color: #FFFFFF;
-    font-style: normal;   
+    color: var(--white-clr);
+    font-style: normal;
 }
+
+.address:hover {
+    color: var(--clr-txt-support);
+}
+
 
 address {
     all: initial
@@ -329,8 +345,9 @@ address {
 .cnt {
     display: block;
     margin-top: 6px;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--foot-context);
 }
+
 .cnt:hover {
-    color: #2196F3;
+    color: var(--clr-txt-support);
 }
