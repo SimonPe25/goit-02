@@ -340,7 +340,7 @@ address {
 
 /*###################################  PARTFOLIO.HTML ################################*/
 
-/* ------------section filter ----------------*/
+/* ------------ filter ----------------*/
 .filter {
     border-top: 1px solid rgba(128, 128, 128, 0.247);
     padding: 93px 496px 0 496px;
@@ -367,7 +367,7 @@ address {
     transition: 1s;
 }
 
-/* ------------section gallery ----------------*/
+/* ------------gallery ----------------*/
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -402,7 +402,6 @@ address {
     letter-spacing: 0.03em;
     color: var(--pargraf-clr);
 }
-
 
 
 /* ################################## STUDIO #####################################*/
