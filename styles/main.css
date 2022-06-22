@@ -1,4 +1,4 @@
-/* ------------------------------------- Обнуление стилей----------------------------------------------*/
+/* ------------------Обнуление стилей---------------------*/
 /* Указываем box sizing */
 *,
 *::before,
@@ -51,12 +51,9 @@ img {
     display: block;
 }
 
-/* Указываем понятную периодичность в потоке данных у article*/
-article>*+* {
-    margin-top: 1em;
-}
 
-/*--------------------------------------- Переменные-------------------------------------------------------*/
+
+/*----------------- Переменные----------------------------*/
 
 :root {
     /* Шрифты*/
@@ -74,6 +71,8 @@ article>*+* {
     --logo-second-clr: #000000;
     --clr-txt-main: #212121;
     --clr-txt-support: #2196F3;
+    --slider-backgr: #EEEEEE;
+
 }
 
 /* Выставляем основные настройки по-умолчанию для body */
@@ -88,7 +87,7 @@ body {
 
 }
 
-/* ------------------------------------- Section №1 "effect" ----------------------------------------------*/
+/* ---------------- Section №1 "effect" ----------------------*/
 /* Header*/
 .container {
     max-width: 1600px;
@@ -132,8 +131,6 @@ body {
 
 .list__link {
     color: var(--clr-txt-main);
-    cursor: pointer;
-    font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -153,7 +150,7 @@ body {
     color: var(--pargraf-clr);
 }
 
-/* ------------------------------------- Section №2 "description" ----------------------------------------------*/
+/* ----------------- Section №2 "description" -------------------*/
 .effect {
     display: flex;
     align-items: center;
@@ -166,7 +163,6 @@ body {
 }
 
 .effect>h1 {
-    font-style: normal;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -183,7 +179,6 @@ body {
     border-radius: 5px;
     border: none;
     cursor: pointer;
-    font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
@@ -199,7 +194,7 @@ body {
     transition: 1s;
 }
 
-/* ------------------------------------- Section №3 "description" ----------------------------------------------*/
+/* --------------Section №3 "description" -----------------*/
 .description {
     display: flex;
     flex-direction: column;
@@ -221,7 +216,6 @@ body {
 
 .text-content__main {
     margin-bottom: 8px;
-    font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.43;
@@ -231,8 +225,6 @@ body {
 }
 
 .wrapper-text__item>p {
-    font-style: normal;
-    font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -250,7 +242,6 @@ body {
 
 .question {
     margin: 96px 0px 50px 2px;
-    font-style: normal;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
@@ -264,7 +255,7 @@ body {
     width: 100%;
 }
 
-/* ------------------------------------- Section №4 "team" ----------------------------------------------*/
+/* ------------Section №4 "team" ------------------*/
 
 .team {
     display: flex;
@@ -284,7 +275,6 @@ body {
 
 .qs-box__txh2 {
     margin-top: 30px;
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -295,8 +285,6 @@ body {
 
 .qs-box__txp {
     margin-top: 19px;
-    font-style: normal;
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.19px;
     text-align: center;
@@ -321,12 +309,10 @@ body {
 
 .address {
     font-family: var(--main-font);
-    font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--white-clr);
-    font-style: normal;
 }
 
 .address:hover {
@@ -350,4 +336,83 @@ address {
 
 .cnt:hover {
     color: var(--clr-txt-support);
+}
+
+/*###################################  PARTFOLIO.HTML ################################*/
+
+/* ------------section filter ----------------*/
+.filter {
+    border-top: 1px solid rgba(128, 128, 128, 0.247);
+    padding: 93px 496px 0 496px;
+}
+
+.filter__btn {
+    padding: 7px 20px 7px 20px;
+    background-color: var(--light-background-clr);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--clr-txt-main);
+
+}
+
+.filter__btn:hover {
+    background-color: var(--clr-txt-support);
+    color: var(--light-background-clr);
+    transition: 1s;
+}
+
+/* ------------section gallery ----------------*/
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 47px 215px;
+    margin-bottom: 21px;
+}
+
+.gallery__wrapper {
+    border: 1px solid rgba(128, 128, 128, 0.158);
+    flex: 0 0 33.3%;                    
+    height: 50px;
+    margin-bottom: 29px;
+    background-color: var(--white-background-clr);
+    max-width: 370px;
+    height: 404px;
+}
+
+.card__maintxt {
+    margin: 21px 0 0 24px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--clr-txt-main);
+}
+
+.card__txt {
+    margin: 4px 0 0 23.5px;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    color: var(--pargraf-clr);
+}
+
+
+
+/* ################################## STUDIO #####################################*/
+.studio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 62vh;
+    background-image: url("../images/partfolio/studio-01.jpg");
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+    background-position: center;
 }
